@@ -1,0 +1,17 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block mensaje_dinamico %}
+<h2>Bienvenido a la sección bermudas</h2>
+
+
+<!-- En esta seccion se crea el formulario vacio, y se define el metodo POST para cuando se presione el boton Che! Agregar -->
+<form action="{% url 'bermudas'%}" method="POST"> {% csrf_token %}
+    <table>
+    {{ codigo }}
+    </table>
+    <input type="submit" value="Agregar bermudas">
+
+</form>
+{% endblock %}

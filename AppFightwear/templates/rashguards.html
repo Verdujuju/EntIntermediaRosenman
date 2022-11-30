@@ -1,0 +1,22 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block mensaje_dinamico %}
+<h2>Bienvenido a la sección rashguards</h2>
+
+
+<!-- En esta seccion se crea el formulario vacio, y se define el metodo POST para cuando se presione el boton Agregar kimono -->
+<form action="{% url 'rashguards'%}" method="post"> {% csrf_token %}
+    <table>
+    {{ codigo }}
+    </table>
+    <input type="submit" value="Agregar rashguard">
+
+</form>
+{% endblock %}
+
+
+
+{% block mensaje_final %}
+{% endblock %}

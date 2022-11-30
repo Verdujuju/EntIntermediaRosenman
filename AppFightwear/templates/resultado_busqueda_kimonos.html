@@ -1,0 +1,26 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="carousel-title">Resultado de la busqueda</h1> 
+
+{% if kimonos_seleccionados %}
+<table>
+    {% for kimono in kimonosos_seleccionados %}
+        <li>{{ kimono.marca }}</li>
+        <li>{{ kimono.color }}</li>
+        <li>{{ kimono.talle }}</li>
+        <li>{{ kimono.precio }}</li>
+        <br>
+    {% endfor %}
+</table>
+
+{% else %}
+
+<h2 style="color: white"> No encontramos kimonos que cumplan el criterio de busqueda!</h2>
+
+{% endif %}
+
+
+{% endblock %}

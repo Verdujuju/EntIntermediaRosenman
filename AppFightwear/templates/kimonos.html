@@ -3,15 +3,15 @@
 {% load static %}
 
 {% block mensaje_dinamico %}
-<h2>Hola estoy en Kimonos</h2>
+<h2>Bienvenido a la sección kimonos</h2>
 
 
-<!-- En esta seccion se crea el formulario vacio, y se define el metodo POST para cuando se presione el boton Che! Agregar -->
+<!-- En esta seccion se crea el formulario vacio, y se define el metodo POST para cuando se presione el boton Agregar kimono -->
 <form action="{% url 'kimonos'%}" method="post"> {% csrf_token %}
     <table>
     {{ codigo }}
     </table>
-    <input type="submit" value="Che! Agrega">
+    <input type="submit" value="Agregar kimono">
 
 </form>
 {% endblock %}
@@ -19,6 +19,5 @@
 
 
 {% block mensaje_final %}
-<p style="color: black">Soy Guada :)</p>
 {% endblock %}
 

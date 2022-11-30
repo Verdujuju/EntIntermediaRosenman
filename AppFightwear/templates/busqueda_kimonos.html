@@ -1,0 +1,20 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h6 class="carousel-title">{{ mensaje_busqueda }}</h6> 
+<h2 style="color:white">Buscando Kimono</h2>
+
+
+<form action="{% url 'resultado_busqueda_kimonos'%}" method="GET">
+    <div class="form-group">
+        <p style="color: white">Marca</p>
+        <input type="text" name="Marca" id="Marca_kimono">
+    </div>
+    <div class="form-group">
+        <input type="submit" class="btn btn-primary btn-block" value="Buscar">
+    </div>      
+</form>
+<p style="color:white">El caracter * busca todos los kimonos de la base de datos.</p>
+{% endblock %}
