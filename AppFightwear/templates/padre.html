@@ -20,9 +20,10 @@
         <!-- Navigation-->
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
-                <a class="btn btn-primary" href="kimonos">Kimonos</a>
-                <a class="btn btn-primary" href="rashguards">Rashguards</a>
-                <a class="btn btn-primary" href="bermudas">Bermudas</a>
+                <a class="btn btn-primary" href="kimonos">Agregar Kimonos</a>
+                <a class="btn btn-primary" href="rashguards">Agregar Rashguards</a>
+                <a class="btn btn-primary" href="bermudas">Agregar Bermudas</a>
+                <a class="btn btn-primary" href="inicio">Inicio</a>
                 
             </div>
         </nav>
@@ -32,17 +33,11 @@
                 <div class="row justify-content-center">
                     <div class="col-xl-6">
                         <div class="text-center text-white">
-                            <!-- Page heading-->
-                            <h1 class="mb-5">Bienvenido a Fightshop</h1>
-                            <!-- Signup form-->
-                            <!-- * * * * * * * * * * * * * * *-->
-                            <!-- * * SB Forms Contact Form * *-->
-                            <!-- * * * * * * * * * * * * * * *-->
-                            <!-- This form is pre-integrated with SB Forms.-->
-                            <!-- To make this form functional, sign up at-->
-                            <!-- https://startbootstrap.com/solution/contact-forms-->
-                            <!-- to get an API token!-->
-                            
-        
+                            {% block mensaje_dinamico %}
+                            {% endblock %}
             </body>
 </html>
+<footer>
+    {% block mensaje_final %}
+    {% endblock %}
+</footer>
