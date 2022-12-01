@@ -7,7 +7,7 @@ urlpatterns = [
     path("kimonos", kimonos, name="kimonos"),
     path("rashguards", rashguards, name="rashguards"),
     path("bermudas", bermudas, name="bermudas"),
-    path("buscar_kimonos", buscar_kimonos, name="buscar_kimonos"),
+    path("busqueda_kimonos", busqueda_kimonos, name="busqueda_kimonos"),
     path("resultado_busqueda", resultado_busqueda_kimonos, name="resultado_busqueda_kimonos"),
 
 

@@ -2,19 +2,21 @@
 
 {% load static %}
 
-{% block titulo %}
-<h1 class="carousel-title">Resultado de la busqueda</h1> 
+{% block mensaje_dinamico %}
+<h1>Resultado de la busqueda</h1> 
+
+<h3>{{ kimonos_seleccionados }}</h3>
 
 {% if kimonos_seleccionados %}
-<table>
-    {% for kimono in kimonosos_seleccionados %}
+<ul>
+    {% for kimono in kimonos_seleccionados %}
         <li>{{ kimono.marca }}</li>
         <li>{{ kimono.color }}</li>
         <li>{{ kimono.talle }}</li>
         <li>{{ kimono.precio }}</li>
         <br>
     {% endfor %}
-</table>
+</ul>
 
 {% else %}
 

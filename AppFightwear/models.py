@@ -27,3 +27,5 @@ class Bermudas(models.Model):
 
 
 
+
+
