@@ -3,24 +3,24 @@
 {% load static %}
 
 {% block mensaje_dinamico %}
-<h1>Resultado de la busqueda</h1> 
+<h1>Kimonos encontrados:</h1> 
 
-<h3>{{ kimonos_seleccionados }}</h3>
 
 {% if kimonos_seleccionados %}
-<ul>
+<br>
     {% for kimono in kimonos_seleccionados %}
         <li>{{ kimono.marca }}</li>
+        <li>{{ kimono.modelo }}</li>
         <li>{{ kimono.color }}</li>
         <li>{{ kimono.talle }}</li>
         <li>{{ kimono.precio }}</li>
         <br>
     {% endfor %}
-</ul>
+</br>
 
 {% else %}
 
-<h2 style="color: white"> No encontramos kimonos que cumplan el criterio de busqueda!</h2>
+<h2 style="color: white"> No encontramos kimonos que cumplan el criterio de búsqueda!</h2>
 
 {% endif %}
 
