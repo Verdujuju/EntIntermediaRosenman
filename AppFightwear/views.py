@@ -14,9 +14,9 @@ def rashguards(request):
             rashguard_ingresada= Rashguards(marca = form_limpio["marca"], modelo = form_limpio["modelo"], color = form_limpio["color"], talle = form_limpio["talle"], precio = form_limpio["precio"])
             rashguard_ingresada.save()
             return render(request, "inicio.html", {"mensaje_inicio":"Rashguard ingresada exitosamente"})
-        else:
+    else:
             form_vacio_rashguards = FormRashguards()
-            return render(request, "rashguards.html", {"codigo" : form_vacio_rashguards})
+            return render(request, "rashguards.html", {"codigo":form_vacio_rashguards})
     
     return render(request, "rashguards.html")
 
@@ -31,7 +31,7 @@ def bermudas(request):
             return render(request, "inicio.html", {"mensaje_inicio":"bermudas ingresadas exitosamente"})
     else:
         form_vacio_bermudas = FormBermudas()
-        return render(request, "bermudas.html", {"codigo" : form_vacio_bermudas})
+        return render(request, "bermudas.html", {"codigo": form_vacio_bermudas})
 
     return render(request, "bermudas.html")
 
@@ -46,7 +46,7 @@ def kimonos(request):
             return render(request, "inicio.html", {"mensaje_inicio":"Kimono ingresado con éxito!"})
     else:
         form_vacio_kimonos = FormKimonos()
-        return render(request, "kimonos.html", {"codigo" : form_vacio_kimonos})
+        return render(request, "kimonos.html", {"codigo":form_vacio_kimonos})
 
     return render(request, "kimonos.html")
 
